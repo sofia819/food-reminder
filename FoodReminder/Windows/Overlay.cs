@@ -76,15 +76,15 @@ public class Overlay
         var imDrawListPtr = ImGui.GetWindowDrawList();
 
         var image = Plugin.TextureProvider.GetFromFile(iconPath).GetWrapOrDefault();
-        
+
         if (configuration.ShowIcon && image != null)
         {
             // Leave some padding
-            ImGui.SetCursorPosX(ImGui.GetWindowContentRegionMin().X + 14 * configuration.OverlayScale);
-            ImGui.SetCursorPosY(ImGui.GetWindowContentRegionMin().Y + 14 * configuration.OverlayScale);
+            ImGui.SetCursorPosX(ImGui.GetWindowContentRegionMin().X + (14 * configuration.OverlayScale));
+            ImGui.SetCursorPosY(ImGui.GetWindowContentRegionMin().Y + (14 * configuration.OverlayScale));
             ImGui.Image(image.ImGuiHandle,
-                        new Vector2((ImageWidth * configuration.OverlayScale) - 14 * configuration.OverlayScale,
-                                    (ImageHeight * configuration.OverlayScale)  - 14 * configuration.OverlayScale));
+                        new Vector2((ImageWidth * configuration.OverlayScale) - (14 * configuration.OverlayScale),
+                                    (ImageHeight * configuration.OverlayScale) - (14 * configuration.OverlayScale)));
         }
 
         var imageEdge = new Vector2(topLeft.X + (ImageWidth * configuration.OverlayScale),

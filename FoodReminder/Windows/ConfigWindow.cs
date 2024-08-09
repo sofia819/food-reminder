@@ -16,10 +16,13 @@ public class ConfigWindow : Window, IDisposable
     // We give this window a constant ID using ###
     // This allows for labels being dynamic, like "{FPS Counter}fps###XYZ counter window",
     // and the window ID will always be "###XYZ counter window" for ImGui
-    public ConfigWindow(Plugin plugin) : base("FoodReminder###Config")
+    public ConfigWindow(Plugin plugin)
+        : base("FoodReminder###FoodReminderConfig")
     {
-        Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoScrollbar |
-                ImGuiWindowFlags.NoScrollWithMouse;
+        Flags =
+            ImGuiWindowFlags.NoResize
+            | ImGuiWindowFlags.NoScrollbar
+            | ImGuiWindowFlags.NoScrollWithMouse;
 
         Size = new Vector2(200, 230);
         SizeCondition = ImGuiCond.Always;

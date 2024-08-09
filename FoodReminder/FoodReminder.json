@@ -3,7 +3,7 @@
     "Name": "FoodReminder",
     "Punchline": "Reminds you to eat food",
     "Description": "Shows a warning to eat food in duties if requirements are met",
-    "RepoUrl": "https://github.com/sofia819/food-reminder",
+    "RepoUrl": "https://github.com/sofia819/ffxiv-food-reminder",
     "ApplicableVersion": "any",
     "Tags": [
         "food",

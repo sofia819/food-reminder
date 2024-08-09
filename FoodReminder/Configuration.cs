@@ -7,6 +7,8 @@ namespace FoodReminder;
 [Serializable]
 public class Configuration : IPluginConfiguration
 {
+    public int Version { get; set; } = 1;
+
     public bool IsEnabled { get; set; } = true;
 
     public bool IsOverlayLocked { get; set; } = true;
@@ -28,6 +30,7 @@ public class Configuration : IPluginConfiguration
     public int RemainingTimeInSeconds { get; set; } = 600;
 
     public bool EnableAll { get; set; } = true;
+
     public bool ShowIfLevelSynced { get; set; } = true;
 
     public bool ShowInExtreme { get; set; } = true;
@@ -35,8 +38,6 @@ public class Configuration : IPluginConfiguration
     public bool ShowInSavage { get; set; } = true;
 
     public bool ShowInUltimate { get; set; } = true;
-
-    public int Version { get; set; } = 1;
 
     // the below exist just to make saving less cumbersome
     public void Save()
